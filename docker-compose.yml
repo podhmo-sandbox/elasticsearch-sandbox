@@ -10,10 +10,10 @@ services:
     ports:
       - "9200:9200"
       - "9300:9300"
-    environment:
-      ES_JAVA_OPTS: "-Xms500m -Xmx500m"
+    # environment:
+    #   ES_JAVA_OPTS: "-Xms500m -Xmx500m"
 
-  kibana:
-    image: kibana
-    ports:
-      - 5601:5601
+  # kibana:
+  #   image: kibana
+  #   ports:
+  #     - 5601:5601
