@@ -1,0 +1,33 @@
+{
+  "mappings": {
+    "doc": {
+      "_all": {
+        "enabled": false
+      },
+      "_source": {
+        "enabled": true
+      },
+      "dynamic": false,
+      "properties": {
+        "age": {
+          "index": true,
+          "type": "integer"
+        },
+        "name": {
+          "index": true,
+          "type": "keyword"
+        },
+        "title": {
+          "index": true,
+          "type": "text"
+        }
+      }
+    }
+  },
+  "settings": {
+    "index.requests.cache.enable": true,
+    "number_of_replicas": 0,
+    "number_of_shards": 1,
+    "refresh_interval": "1s"
+  }
+}

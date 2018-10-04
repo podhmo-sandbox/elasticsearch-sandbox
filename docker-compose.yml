@@ -1,0 +1,19 @@
+version: '3.1'
+
+# https://hub.docker.com/_/elasticsearch/
+services:
+  elasticsearch:
+    image: elasticsearch
+    volumes:
+      - "$PWD/.local/logs/elasticsearch:/usr/share/elasticsearch/logs"
+      - "$PWD/.local/data/elasticsearch:/usr/share/elasticsearch/data"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      ES_JAVA_OPTS: "-Xms500m -Xmx500m"
+
+  kibana:
+    image: kibana
+    ports:
+      - 5601:5601
