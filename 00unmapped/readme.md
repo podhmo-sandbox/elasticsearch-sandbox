@@ -5,6 +5,9 @@ mappingに存在しないデータは検索条件に指定しても捨てられ�
 
 ※ defaultだとdynamic mappingが有効だけれど。dynamic mappingをfalseにした場合の話。
 
+- nicknameはデータにしか無い
+- nicknameはmappingに存在しない
+
 ```console
 $ cat mapping.json | http --json PUT :9200/00unmapped
 HTTP/1.1 200 OK
